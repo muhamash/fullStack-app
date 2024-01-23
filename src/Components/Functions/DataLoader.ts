@@ -1,5 +1,5 @@
 interface Products {
-  [key: string]: any;
+  [key: string]: string;
 }
 
 const DataLoader = async (): Promise<Products[]> =>
@@ -14,7 +14,8 @@ const DataLoader = async (): Promise<Products[]> =>
         }
         console.log( products );
         return products;
-    } catch ( error )
+    }
+    catch ( error )
     {
         console.error( 'Error fetching data:', error );
         return [];

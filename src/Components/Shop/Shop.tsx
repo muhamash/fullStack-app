@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
-const Shop = () => {
+const Shop = () =>
+{
+    const initialProducts = useLoaderData()
+    console.log(typeof initialProducts)
     return (
         <div>
-            Shop
+            Shop:{}
         </div>
     );
 };
